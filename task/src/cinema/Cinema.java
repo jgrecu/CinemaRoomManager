@@ -86,14 +86,9 @@ public class Cinema {
         System.out.println();
         System.out.println("Cinema:");
         for (int i = 0; i <= cinemaRoom[0].length; i++) {
-            if (i == 0) {
-                System.out.print("  ");
-            } else if (i < cinemaRoom[0].length) {
-                System.out.print(i + " ");
-            } else {
-                System.out.println(i);
-            }
+            System.out.print(i == 0 ? " " : " " + i);
         }
+        System.out.println();
         for (int i = 0; i < cinemaRoom.length; i++) {
             System.out.print((i + 1) + " ");
             for (int j = 0; j < cinemaRoom[i].length; j++) {
