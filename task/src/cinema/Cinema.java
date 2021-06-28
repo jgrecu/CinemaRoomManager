@@ -21,14 +21,14 @@ public class Cinema {
         while (true) {
             printMenu();
             int choice = scanner.nextInt();
-            //scanner.nextLine();
-            if (choice == 1) {
+
+            if (choice == 0) {
+                scanner.close();
+                break;
+            } else if (choice == 1) {
                 printCinemaRoom(cinemaRoom);
             } else if (choice == 2) {
                 cinemaRoom = buyTicket(cinemaRoom);
-            } else if (choice == 0) {
-                scanner.close();
-                break;
             }
         }
 
@@ -76,10 +76,9 @@ public class Cinema {
     }
 
     public static void printMenu() {
-        System.out.println();
-        System.out.println("1. Show the seats");
-        System.out.println("2. Buy a ticket");
-        System.out.println("0. Exit");
+        System.out.println("\n1. Show the seats" +
+                "\n2. Buy a ticket" +
+                "\n0. Exit");
     }
 
     public static void printCinemaRoom(String[][] cinemaRoom) {
