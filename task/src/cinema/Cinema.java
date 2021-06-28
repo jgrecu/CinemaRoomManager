@@ -20,7 +20,7 @@ public class Cinema {
         System.out.println("Enter the number of seats in each row: ");
         int seatsPerRow = scanner.nextInt();
         scanner.close();
-        System.out.println("Total income:");
+
         int totalIncome = 0;
         int totalNumberOfSeats = numberOfRows * seatsPerRow;
         if (totalNumberOfSeats <= 60) {
@@ -28,6 +28,8 @@ public class Cinema {
         } else {
             totalIncome = (numberOfRows / 2 * seatsPerRow * 10) + ((numberOfRows - numberOfRows / 2) * seatsPerRow * 8);
         }
+
+        System.out.println("Total income:");
         System.out.println("$" + totalIncome);
     }
 }
