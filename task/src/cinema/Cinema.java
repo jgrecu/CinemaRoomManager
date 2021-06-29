@@ -55,10 +55,9 @@ public class Cinema {
             choiceRow = scanner.nextInt();
             System.out.println("Enter a seat number in that row: ");
             choiceSeat = scanner.nextInt();
-            if (choiceRow - 1 < 0 || choiceRow > cinemaRoom.length) {
-                System.out.println("Wrong input!");
-                continue;
-            } else if (choiceSeat -1 < 0 || choiceSeat > cinemaRoom[0].length) {
+            boolean rowNotOutOfBounds = choiceRow - 1 < 0 || choiceRow > cinemaRoom.length;
+            boolean seatNotOutOfBounds = choiceSeat -1 < 0 || choiceSeat > cinemaRoom[0].length;
+            if (rowNotOutOfBounds || seatNotOutOfBounds) {
                 System.out.println("Wrong input!");
                 continue;
             } else if (cinemaRoom[choiceRow - 1][choiceSeat - 1].equals("B")) {
